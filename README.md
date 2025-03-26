@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aahar Web
 
-## Getting Started
+## Project Setup
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js (v14.x or later)
+- npm (v6.x or later) or yarn (v1.x or later)
+- Git
+- Docker
+
+### Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/armanmaurya/aahar-web.git
+    cd aahar-web
+    ```
+
+2. Install the required dependencies:
+    ```sh
+    npm install
+    ```
+
+### Running the Project
+
+1. Launch the development server:
+    ```sh
+    npm run dev
+    ```
+
+2. Open your web browser and navigate to `http://localhost:3000` to access the application.
+
+### Running the Project with Docker
+
+1. Build the Docker image:
+    ```sh
+    docker build -t aahar-web .
+    ```
+
+2. Execute the Docker container:
+    ```sh
+    docker run -p 3000:3000 aahar-web
+    ```
+
+3. Open your web browser and navigate to `http://localhost:3000` to access the application.
+
+### Building for Production
+
+To generate a production build, execute:
+```sh
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The production-ready files will be located in the `build` directory.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Starting the Production Server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To initiate the production server, execute:
+```sh
+npm start
+```
 
-## Learn More
+### Contributing
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Implement your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
