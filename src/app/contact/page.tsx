@@ -7,8 +7,8 @@ const Page = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center py-12">
         {/* Email */}
         <div className="flex flex-col items-center">
-          <div className="w-20 h-20 flex items-center justify-center bg-yellow-100 rounded-full">
-            <FaEnvelope className="text-2xl text-yellow-500" />
+          <div className="w-20 h-20 flex items-center justify-center bg-green-100 rounded-full">
+            <FaEnvelope className="text-2xl text-green-500" />
           </div>
           <h3 className="font-semibold mt-4">Email Address</h3>
           <p className="text-gray-600 text-sm">info@example.com</p>
@@ -17,8 +17,8 @@ const Page = () => {
 
         {/* Phone */}
         <div className="flex flex-col items-center">
-          <div className="w-20 h-20 flex items-center justify-center bg-yellow-100 rounded-full">
-            <FaPhone className="text-2xl text-yellow-500" />
+          <div className="w-20 h-20 flex items-center justify-center bg-green-100 rounded-full">
+            <FaPhone className="text-2xl text-green-500" />
           </div>
           <h3 className="font-semibold mt-4">Phone Number</h3>
           <p className="text-gray-600 text-sm">+88 (800) 123 4567</p>
@@ -27,8 +27,8 @@ const Page = () => {
 
         {/* Address */}
         <div className="flex flex-col items-center">
-          <div className="w-20 h-20 flex items-center justify-center bg-yellow-100 rounded-full">
-            <FaMapMarkerAlt className="text-2xl text-yellow-500" />
+          <div className="w-20 h-20 flex items-center justify-center bg-green-100 rounded-full">
+            <FaMapMarkerAlt className="text-2xl text-green-500" />
           </div>
           <h3 className="font-semibold mt-4">Our Address</h3>
           <p className="text-gray-600 text-sm">82 12th Street, Office 14</p>
@@ -37,8 +37,8 @@ const Page = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-yellow-100 p-8 rounded-lg">
-        <h4 className="text-yellow-500 text-sm font-semibold text-center">
+      <div className="bg-green-100 p-8 rounded-lg">
+        <h4 className="text-green-500 text-sm font-semibold text-center">
           Contact Us
         </h4>
         <h2 className="text-2xl font-bold text-center mt-2">
@@ -57,7 +57,7 @@ const Page = () => {
               </label>
               <input
                 type="text"
-                className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring focus:ring-yellow-300"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring focus:ring-green-300"
               />
             </div>
             <div>
@@ -66,7 +66,7 @@ const Page = () => {
               </label>
               <input
                 type="email"
-                className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring focus:ring-yellow-300"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring focus:ring-green-300"
               />
             </div>
           </div>
@@ -75,20 +75,20 @@ const Page = () => {
             <label className="text-sm font-medium">
               Your Message <span className="text-red-500">*</span>
             </label>
-            <textarea className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring focus:ring-yellow-300 h-32"></textarea>
+            <textarea className="w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring focus:ring-green-300 h-32"></textarea>
           </div>
 
           <div className="mt-4 flex items-start">
             <input
               type="checkbox"
-              className="w-4 h-4 text-yellow-600 border-gray-300 rounded focus:ring-yellow-300"
+              className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-300"
             />
             <label className="text-sm text-gray-600 ml-2">
               I agree that my submitted data is being collected and stored.
             </label>
           </div>
 
-          <button className="w-full bg-yellow-600 text-white font-medium py-3 rounded-md mt-6 hover:bg-yellow-700 transition">
+          <button className="w-full bg-green-600 text-white font-medium py-3 rounded-md mt-6 hover:bg-green-700 transition">
             Send Message
           </button>
         </form>
