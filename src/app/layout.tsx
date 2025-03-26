@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 export default function RootLayout({
   children,
@@ -9,16 +10,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased text-gray-900 bg-yellow-50">
+        <NextTopLoader color="#FFD700" />
         <nav className="border-yellow-200">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a
-              href="https://flowbite.com/"
+              href="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img
                 src="https://flowbite.com/docs/images/logo.svg"
                 className="h-8"
-                alt="Flowbite Logo"
+                alt="Aahar Logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-yellow-800">
                 Aahar
@@ -160,9 +162,9 @@ export default function RootLayout({
             <hr className="my-6 border-yellow-200 sm:mx-auto lg:my-8" />
             <div className="sm:flex sm:items-center sm:justify-between">
               <span className="text-sm text-yellow-500 sm:text-center">
-                © 2023{" "}
+                © 2025{" "}
                 <a href="https://flowbite.com/" className="hover:underline">
-                  Flowbite™
+                  Aahar™
                 </a>
                 . All Rights Reserved.
               </span>
@@ -183,7 +185,10 @@ export default function RootLayout({
                   </svg>
                   <span className="sr-only">Facebook page</span>
                 </a>
-                <a href="#" className="text-yellow-500 hover:text-yellow-900 ms-5">
+                <a
+                  href="#"
+                  className="text-yellow-500 hover:text-yellow-900 ms-5"
+                >
                   <svg
                     className="w-4 h-4"
                     aria-hidden="true"
