@@ -18,104 +18,51 @@ import {
 import Image from "next/image";
 
 const services = [
-  {
-    text: "Large Network of Vendors and Customers",
-    icon: faClipboardList,
-    color: "text-[#18A9C8]",
-    bg: "border-[#18A9C8]",
-  },
-  {
-    text: "Hassle-Free Process for Homemakers",
-    icon: faSackDollar,
-    color: "text-[#18A9C8]",
-    bg: "border-[#18A9C8]",
-  },
-  {
-    text: "Reliable and Fast Delivery Service",
-    icon: faTruckFast,
-    color: "text-[#C1D502]",
-    bg: "border-[#C1D502]",
-  },
-  {
-    text: "Cost-Effective Meals for everyone",
-    icon: faBowlFood,
-    color: "text-[#3ABF38]",
-    bg: "border-[#3ABF38]",
-  },
-  {
-    text: "Empowering Homemakers",
-    icon: faUsers,
-    color: "text-[#D12F2F]",
-    bg: "border-[#D12F2F]",
-  },
-  {
-    text: "Emotional Connect with the food you eat",
-    icon: faHeart,
-    color: "text-[#D12F2F]",
-    bg: "border-[#D12F2F]",
-  },
-  {
-    text: "Employment opportunities for delivery partners",
-    icon: faPeopleCarryBox,
-    color: "text-[#3ABF38]",
-    bg: "border-[#3ABF38]",
-  },
-  {
-    text: "Healthy and Hygienic food",
-    icon: faUtensils,
-    color: "text-[#C1D502]",
-    bg: "border-[#C1D502]",
-  },
-  {
-    text: "Comfort of Home-Cooked Food",
-    icon: faHandshake,
-    color: "text-[#18A9C8]",
-    bg: "border-[#18A9C8]",
-  },
-  {
-    text: "Customization Options",
-    icon: faChartBar,
-    color: "text-[#18A9C8]",
-    bg: "border-[#18A9C8]",
-  },
+  { text: "Large Network of Vendors and Customers", icon: faClipboardList, color: "text-[#18A9C8]", bg: "border-[#18A9C8]" },
+  { text: "Hassle-Free Process for Homemakers", icon: faSackDollar, color: "text-[#18A9C8]", bg: "border-[#18A9C8]" },
+  { text: "Reliable and Fast Delivery Service", icon: faTruckFast, color: "text-[#C1D502]", bg: "border-[#C1D502]" },
+  { text: "Cost-Effective Meals for everyone", icon: faBowlFood, color: "text-[#3ABF38]", bg: "border-[#3ABF38]" },
+  { text: "Empowering Homemakers", icon: faUsers, color: "text-[#D12F2F]", bg: "border-[#D12F2F]" },
+  { text: "Emotional Connect with the food you eat", icon: faHeart, color: "text-[#D12F2F]", bg: "border-[#D12F2F]" },
+  { text: "Employment opportunities for delivery partners", icon: faPeopleCarryBox, color: "text-[#3ABF38]", bg: "border-[#3ABF38]" },
+  { text: "Healthy and Hygienic food", icon: faUtensils, color: "text-[#C1D502]", bg: "border-[#C1D502]" },
+  { text: "Comfort of Home-Cooked Food", icon: faHandshake, color: "text-[#18A9C8]", bg: "border-[#18A9C8]" },
+  { text: "Customization Options", icon: faChartBar, color: "text-[#18A9C8]", bg: "border-[#18A9C8]" },
 ];
 
 export const Services = () => {
   return (
-    <div className="w-full text-black py-16 px-6 flex justify-center">
-      <div className="max-w-6xl w-full flex flex-col items-center">
+    <div className="w-full text-black py-16 px-6 flex justify-center bg-gradient-to-b from-white to-gray-100">
+      <div className="max-w-5xl w-full flex flex-col items-center">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
-          SERVICES
+        <h2 className="text-4xl font-extrabold text-center mb-12 tracking-wide text-gray-900">
+          Our <span className="text-[#18A9C8]">Services</span>
         </h2>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center relative">
           {/* Left Side Services */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-6 text-right"
+            className="space-y-8 text-right"
           >
             {services.slice(0, 5).map((service, index) => (
               <motion.div
                 key={index}
-                className="flex items-center justify-end space-x-4"
+                className="flex items-center justify-end space-x-5"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <p className="w-48">{service.text}</p>
+                <p className="w-56 text-lg font-medium text-gray-700">{service.text}</p>
                 <div
-                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg}`}
+                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg} shadow-md hover:scale-110 transition-all`}
                 >
-                  <FontAwesomeIcon
-                    icon={service.icon}
-                    className={`text-2xl ${service.color}`}
-                  />
+                  <FontAwesomeIcon icon={service.icon} className={`text-3xl ${service.color}`} />
                 </div>
               </motion.div>
             ))}
@@ -123,13 +70,20 @@ export const Services = () => {
 
           {/* Illustration */}
           <div className="hidden md:flex justify-center">
-            <Image
-              src="https://placehold.co/200x200"
-              alt="Illustration"
-              width={200}
-              height={200}
-              className="object-contain"
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src="https://placehold.co/250x250"
+                alt="Illustration"
+                width={250}
+                height={250}
+                className="object-contain rounded-lg shadow-lg"
+              />
+            </motion.div>
           </div>
 
           {/* Right Side Services */}
@@ -138,26 +92,23 @@ export const Services = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-6 text-left"
+            className="space-y-8 text-left"
           >
             {services.slice(5).map((service, index) => (
               <motion.div
                 key={index}
-                className="flex items-center space-x-4"
+                className="flex items-center space-x-5"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div
-                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg}`}
+                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg} shadow-md hover:scale-110 transition-all`}
                 >
-                  <FontAwesomeIcon
-                    icon={service.icon}
-                    className={`text-2xl ${service.color}`}
-                  />
+                  <FontAwesomeIcon icon={service.icon} className={`text-3xl ${service.color}`} />
                 </div>
-                <p className="w-48">{service.text}</p>
+                <p className="w-56 text-lg font-medium text-gray-700">{service.text}</p>
               </motion.div>
             ))}
           </motion.div>
