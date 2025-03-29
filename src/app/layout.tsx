@@ -21,12 +21,22 @@ export default function RootLayout({
               <Link href="/" className="text-3xl font-bold text-black tracking-wide">AAHAR</Link>
               
               <div className="hidden md:flex space-x-6 text-lg">
-                {["Home", "Contact", "Deliveries", "Housemakers"].map((item) => (
-                  <Link key={item} href={`/${item.toLowerCase()}`} className="relative group">
-                    <span className="hover:text-[#FFC300] transition">{item}</span>
-                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#FFC300] transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
-                ))}
+                <Link href="/" className="relative group">
+                  <span className="hover:text-[#FFC300] transition">Home</span>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#FFC300] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+                <Link href="/contact" className="relative group">
+                  <span className="hover:text-[#FFC300] transition">Contact</span>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#FFC300] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+                <Link href="/deliveries" className="relative group">
+                  <span className="hover:text-[#FFC300] transition">Deliveries</span>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#FFC300] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+                <Link href="/food-and-meels" className="relative group">
+                  <span className="hover:text-[#FFC300] transition">Food & Meels</span>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#FFC300] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
               </div>
 
               <Link href="/signup">
@@ -38,7 +48,7 @@ export default function RootLayout({
           </header>
 
           {/* Dynamic Page Content */}
-          <main className="w-full max-w-6xl p-8 flex flex-col items-center flex-grow mx-auto">
+          <main className="w-full max-w-7xl p-8 flex flex-col items-center flex-grow mx-auto">
             {children}
           </main>
 

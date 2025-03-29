@@ -157,7 +157,7 @@ export default function Home() {
             },
           ].map((advantage, index) => (
             <motion.div
-            key={index}
+            key={index} 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, delay: index * 0.1 }}
