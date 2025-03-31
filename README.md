@@ -1,4 +1,4 @@
-# Aahar Web
+# Aahaar Web
 
 ## Project Setup
 

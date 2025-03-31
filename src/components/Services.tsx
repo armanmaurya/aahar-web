@@ -32,7 +32,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <div className="w-full text-black py-16 px-6 flex justify-center bg-gradient-to-b from-white to-gray-100">
+    <div className="w-full text-black py-16 px-6 flex justify-center">
       <div className="max-w-5xl w-full flex flex-col items-center">
         {/* Section Title */}
         <h2 className="text-4xl font-extrabold text-center mb-12 tracking-wide text-gray-900">
@@ -47,23 +47,25 @@ export const Services = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-8 text-right"
+            className="space-y-8 text-right md:text-right"
           >
             {services.slice(0, 5).map((service, index) => (
               <motion.div
                 key={index}
-                className="flex items-center justify-end space-x-5"
+                className="flex flex-col md:flex-row-reverse items-center md:justify-end space-x-0 md:space-x-5 space-y-3 md:space-y-0"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <p className="w-56 text-lg font-medium text-gray-700">{service.text}</p>
                 <div
-                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg} shadow-md hover:scale-110 transition-all`}
+                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg} shadow-md hover:scale-105 transition-all`}
                 >
                   <FontAwesomeIcon icon={service.icon} className={`text-3xl ${service.color}`} />
                 </div>
+                <p className="w-full md:w-56 text-lg md:mx-2 font-medium text-gray-700 text-center">
+                  {service.text}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -77,11 +79,11 @@ export const Services = () => {
               viewport={{ once: true }}
             >
               <Image
-                src="https://placehold.co/250x250"
+                src="/service.png"
                 alt="Illustration"
                 width={250}
                 height={250}
-                className="object-contain rounded-lg shadow-lg"
+                className="object-contain"
               />
             </motion.div>
           </div>
@@ -92,23 +94,25 @@ export const Services = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="space-y-8 text-left"
+            className="space-y-8 text-left md:text-left"
           >
             {services.slice(5).map((service, index) => (
               <motion.div
                 key={index}
-                className="flex items-center space-x-5"
+                className="flex flex-col md:flex-row items-center md:justify-start space-x-0 md:space-x-5 space-y-3 md:space-y-0"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div
-                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg} shadow-md hover:scale-110 transition-all`}
+                  className={`w-16 h-16 flex items-center justify-center rounded-full border-4 ${service.bg} shadow-md hover:scale-105 transition-all`}
                 >
                   <FontAwesomeIcon icon={service.icon} className={`text-3xl ${service.color}`} />
                 </div>
-                <p className="w-56 text-lg font-medium text-gray-700">{service.text}</p>
+                <p className="w-full md:w-56 text-lg font-medium text-gray-700 text-center md:text-left">
+                  {service.text}
+                </p>
               </motion.div>
             ))}
           </motion.div>
