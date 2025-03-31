@@ -25,6 +25,9 @@ WORKDIR /app
 # Set environment to production
 ENV NODE_ENV=production
 
+# Create a non-root user and group
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
 # Copy only necessary files from builder stage
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/.next ./.next
@@ -32,8 +35,10 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/src ./src 
 
-# Use a non-root user for security
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+# Set ownership of the .next directory
+RUN chown -R appuser:appgroup /app/.next
+
+# Switch to the non-root user
 USER appuser
 
 # Expose port
