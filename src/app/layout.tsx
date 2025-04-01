@@ -15,7 +15,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="font-[Inter]">
+      <body className="font-[Inter] w-screen overflow-x-hidden">
         <NextTopLoader color="#FFC300" />
 
         {/* Main Layout Wrapper */}
