@@ -112,5 +112,19 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
 
+/* Hide scrollbar for all elements */
+/* ::-webkit-scrollbar {
+  display: none; 
+} */
 
